@@ -1,0 +1,10 @@
+{
+  "name": "dustmap-www",
+  "dependencies": {
+    "leaflet": "*",
+    "async": "*",
+    "bootstrap": "*",
+    "jquery.cookie": "*",
+    "jquery": "*"
+  }
+}

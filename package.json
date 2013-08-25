@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "bower": "~1.0.0",
+    "connect": "~2.8.4",
+    "requirejs": "~2.1.8"
+  },
+  "devDependencies": {
+    "jshint": "~2.1.7"
+  },
+  "scripts" : {
+    "start" : "[ \"$NODE_ENV\" = 'prod' ] && bash build.sh ; node ."
+  },
+  "config" : {
+    "http_port" : 8080
+  },
+  "name": "dustmap-www",
+  "version" : "0.0.0"
+}
