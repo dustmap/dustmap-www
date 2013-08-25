@@ -42,13 +42,13 @@ define(function(){
     };
 
     Cache.prototype.get = function(key){
-        key = keyToString();
+        key = keyToString(key);
         return this._keys[key];
     };
 
     Cache.prototype.has = function(key){
-        key = keyToString();
-        return this._keys.hasOwnProperty('key');
+        key = keyToString(key);
+        return this._keys.hasOwnProperty(key);
     };
 
 
