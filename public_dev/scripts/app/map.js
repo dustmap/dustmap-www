@@ -1,6 +1,5 @@
-"use strict";
-
-define(['leaflet', 'jquery', 'async', 'helper/cache', 'cookie'], function(L, $, async, Cache){
+define(['leaflet', 'jquery', 'async', 'helper/cache', 'tpl!tmpl/map.marker.tpl', 'cookie'], function(L, $, async, Cache, marker_tpl){
+    "use strict";
 
     L.Icon.Default.imagePath = '/vendor/leaflet/images';
 
@@ -157,7 +156,7 @@ define(['leaflet', 'jquery', 'async', 'helper/cache', 'cookie'], function(L, $, 
 
                     if (! cache.has(key)){
                         var marker = L.marker(key).addTo(self.map);
-                        marker.bindPopup( JSON.stringify(node, undefined, 2) );
+                        marker.bindPopup(marker_tpl(node));
                         cache.add(key, marker);
                     }
                 });

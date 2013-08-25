@@ -1,6 +1,5 @@
-"use strict";
-
 define(['jquery'], function($){
+    "use strict";
 
     //-----------------------------------------------------
     var ApiUrl = function(base){
@@ -8,6 +7,7 @@ define(['jquery'], function($){
         this._resource = '';
         this._method = 'GET';
         this._query = {};
+        this._error = null;
         return this;
     };
     ApiUrl.prototype.run = function(){
@@ -17,6 +17,9 @@ define(['jquery'], function($){
             data : self._query ,
             url : self._base + self._resource
         });
+        if (this._error){
+            xhr.error(this._error);
+        }
         return xhr;
     };
     ApiUrl.prototype.resource = function(res){
@@ -25,7 +28,12 @@ define(['jquery'], function($){
     };
     ApiUrl.prototype.addQuery = function(key, val){
         this._query[key] = val;
+        return this;
     };
+    ApiUrl.prototype.error = function(err_handler){
+        this._error = err_handler;
+        return this;
+    }   
 
 
     //-----------------------------------------------------

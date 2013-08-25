@@ -12,7 +12,8 @@
         leaflet   : '../vendor/leaflet/leaflet' ,
         bootstrap : '../vendor/bootstrap/js/bootstrap' ,
         cookie    : '../vendor/cookie/jquery.cookie',
-        async     : '../vendor/async/async'
+        async     : '../vendor/async/async',
+        tmpl      : '../templates'
     }
 
 })

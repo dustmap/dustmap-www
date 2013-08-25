@@ -5,6 +5,8 @@
     "async": "*",
     "bootstrap": "*",
     "jquery.cookie": "*",
-    "jquery": "*"
+    "jquery": "*",
+    "requirejs-text": "~2.0.10",
+    "requirejs-tpl": "*"
   }
 }
